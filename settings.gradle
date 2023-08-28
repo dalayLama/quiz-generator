@@ -1,2 +1,3 @@
 rootProject.name = 'quiz-generator'
 include 'quiz-generator-dto'
+include 'quiz-generator-service'

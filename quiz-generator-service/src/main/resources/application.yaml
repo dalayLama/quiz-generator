@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+quiz-sources:
+  trivia:
+    url: https://opentdb.com/
+    categories-list-path: /api_category.php
+    questions-path: /api.php
+  quiz-api:
+    enable: false
+    url: https://quizapi.io
+    apiKeyParamName: apiKey
+    token: 4cK1l3s9HcEiMRwEDin8e3Is3rRINHN36RBdMkBr
+    paths:
+      questions: /api/v1/questions
+    categories:
+      linux: Linux
+      bash: Bash
+      uncategorized: Uncategorized
+      docker: Docker
+      sql: SQL
+      cms: CMS
+      code: Code
+      devops: DevOps

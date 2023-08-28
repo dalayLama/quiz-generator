@@ -1,0 +1,22 @@
+[
+  {
+    "name": "f1",
+    "description": "description",
+    "type": "NUMBER",
+    "required": false,
+    "conf": {
+      "integer": true,
+      "maxValue": 20,
+      "minValue": 5
+    }
+  },
+  {
+    "name": "f2",
+    "description": "description",
+    "type": "SELECT",
+    "required": true,
+    "conf": [
+      {"id": "o1", "description": "d1"}
+    ]
+  }
+]

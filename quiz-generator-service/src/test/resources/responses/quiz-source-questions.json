@@ -1,0 +1,13 @@
+{
+  "sourceId": "simple-quiz-source",
+  "questions": [
+    {
+      "question": "question",
+      "answers": ["answer1", "answer2"],
+      "correctAnswers": ["answer1"],
+      "category": "category",
+      "multiplyAnswers": true,
+      "difficulty": "EASY"
+    }
+  ]
+}
