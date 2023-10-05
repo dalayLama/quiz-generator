@@ -19,7 +19,7 @@ public class QuizApiInitDataNormalizer implements InitDataNormalizer<QuizApiInit
     private final QuizApiProperties properties;
 
     @Override
-    public Map<String, String> normalize(Collection<InitField> initFields, QuizApiInitData initData) {
+    public Map<String, String> normalize(Collection<InitField<?>> initFields, QuizApiInitData initData) {
         Map<String, String> map = NormalizeUtil.toMap(initFields, initData);
         map.put(properties.getApiKeyParamName(), properties.getToken());
         return map;

@@ -42,13 +42,13 @@ public class QuizApiSource implements QuizSource<QuizApiInitData> {
     }
 
     @Override
-    public List<InitField> initFields() {
+    public List<InitField<?>> initFields() {
         return quizApiInitFieldsProvider.getInitFields().toList();
     }
 
     @Override
     public QuestionSet generate(QuizApiInitData initData) {
-        List<InitField> initFields = initFields();
+        List<InitField<?>> initFields = initFields();
         Map<String, String> params = initDataNormalizer.normalize(initFields, initData);
         List<Question> questions = quizApiClient.questions(params).stream().map(questionMapper::toQuestion).toList();
         return new QuestionSet(id(), questions);

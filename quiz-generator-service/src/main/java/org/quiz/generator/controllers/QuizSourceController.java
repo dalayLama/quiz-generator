@@ -29,7 +29,7 @@ public class QuizSourceController {
     }
 
     @GetMapping("/{id}/init-data-definition")
-    public List<InitField> getInitData(@PathVariable String id) {
+    public List<InitField<?>> getInitData(@PathVariable String id) {
         return quizSourcesProvider.getSource(id)
                 .map(QuizSource::initFields)
                 .orElseThrow(() -> new QuizSourceNotFoundException(id));

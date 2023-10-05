@@ -5,9 +5,9 @@
     "type": "NUMBER",
     "required": false,
     "conf": {
-      "integer": true,
-      "maxValue": 20,
-      "minValue": 5
+      "className": "org.quizstorage.generator.dto.NumberFormat",
+      "maxValue": 5,
+      "minValue": 20
     }
   },
   {
@@ -15,8 +15,15 @@
     "description": "description",
     "type": "SELECT",
     "required": true,
-    "conf": [
-      {"id": "o1", "description": "d1"}
-    ]
+    "conf": {
+      "className": "org.quizstorage.generator.dto.SelectFormat",
+      "multiValue": false,
+      "selectOptions": [
+        {
+          "id": "o1",
+          "description": "d1"
+        }
+      ]
+    }
   }
 ]

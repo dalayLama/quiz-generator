@@ -40,13 +40,13 @@ public class TriviaQuizSource implements QuizSource<TriviaInitData> {
     }
 
     @Override
-    public List<InitField> initFields() {
+    public List<InitField<?>> initFields() {
         return triviaInitFieldsProvider.getInitFields().toList();
     }
 
     @Override
     public QuestionSet generate(TriviaInitData initData) {
-        List<InitField> initFields = triviaInitFieldsProvider.getInitFields().toList();
+        List<InitField<?>> initFields = triviaInitFieldsProvider.getInitFields().toList();
         Map<String, String> params = normalizer.normalize(initFields, initData);
         List<Question> questions = triviaClient.questions(params).results().stream()
                 .map(questionMapper::toQuestion)

@@ -6,6 +6,6 @@ import java.util.stream.Stream;
 
 public interface InitFieldsProvider {
 
-    Stream<InitField> getInitFields();
+    Stream<InitField<?>> getInitFields();
 
 }

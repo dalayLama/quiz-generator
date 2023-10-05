@@ -13,14 +13,14 @@ import java.util.stream.Collectors;
 @UtilityClass
 public class NormalizeUtil {
 
-    public static <S extends Map<String, String>> Map<String, String> toMap(Collection<InitField> initFields, S from) {
+    public static <S extends Map<String, String>> Map<String, String> toMap(Collection<InitField<?>> initFields, S from) {
         return initFields.stream()
                 .map(initField -> generate(initField, from))
                 .filter(Objects::nonNull)
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
-    private static <S extends Map<String, String>> Map.Entry<String, String> generate(InitField field, S initData) {
+    private static <S extends Map<String, String>> Map.Entry<String, String> generate(InitField<?> field, S initData) {
         String value = initData.get(field.name());
         boolean blank = StringUtils.isBlank(value);
         if (blank && field.required()) {

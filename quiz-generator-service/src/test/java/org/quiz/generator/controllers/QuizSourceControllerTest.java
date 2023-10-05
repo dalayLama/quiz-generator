@@ -7,8 +7,8 @@ import org.quiz.generator.sources.InitData;
 import org.quiz.generator.sources.QuizSource;
 import org.quiz.generator.sources.QuizSourcesProvider;
 import org.quiz.generator.sources.TestFilesUtil;
-import org.quiz.generator.sources.fields.NumberFormat;
-import org.quiz.generator.sources.fields.SelectOption;
+import org.quizstorage.generator.dto.NumberFormat;
+import org.quizstorage.generator.dto.SelectOption;
 import org.quizstorage.generator.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -175,12 +175,14 @@ class QuizSourceControllerTest {
         }
 
         @Override
-        public List<InitField> initFields() {
-            InitField numberInitField = FieldType.NUMBER.createInitField(
+        public List<InitField<?>> initFields() {
+            InitField<NumberFormat> numberInitField = FieldType.NUMBER.createInitField(
                     "f1", "description", false, new NumberFormat(5, 20));
-            InitField selectInitField = FieldType.SELECT.createInitField("f2", "description", true, List.of(
+            SelectFormat selectFormat = new SelectFormat(false, List.of(
                     new SelectOption("o1", "d1")
             ));
+            InitField<SelectFormat> selectInitField = FieldType.SELECT
+                    .createInitField("f2", "description", true, selectFormat);
             return List.of(numberInitField, selectInitField);
         }
 

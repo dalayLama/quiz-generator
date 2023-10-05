@@ -1,4 +1,4 @@
-package org.quiz.generator.sources.fields;
+package org.quizstorage.generator.dto;
 
 public record SelectOption(
         String id,

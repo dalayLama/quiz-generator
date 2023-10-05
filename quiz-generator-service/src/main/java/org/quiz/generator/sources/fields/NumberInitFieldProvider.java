@@ -3,6 +3,7 @@ package org.quiz.generator.sources.fields;
 import lombok.RequiredArgsConstructor;
 import org.quizstorage.generator.dto.FieldType;
 import org.quizstorage.generator.dto.InitField;
+import org.quizstorage.generator.dto.NumberFormat;
 
 @RequiredArgsConstructor
 public class NumberInitFieldProvider implements InitFieldProvider {
@@ -22,7 +23,7 @@ public class NumberInitFieldProvider implements InitFieldProvider {
     }
 
     @Override
-    public InitField get() {
+    public InitField<NumberFormat> get() {
         NumberFormat numberFormat = new NumberFormat(maxValue, minValue);
         return FieldType.NUMBER.createInitField(name, description, required, numberFormat);
     }

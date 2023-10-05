@@ -4,7 +4,7 @@ import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import org.junit.jupiter.api.Test;
 import org.quiz.generator.sources.TestFilesUtil;
-import org.quiz.generator.sources.fields.SelectOption;
+import org.quizstorage.generator.dto.SelectOption;
 import org.quiz.generator.sources.opentriviadb.providers.select.QuestionCategoriesProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,7 +31,7 @@ class QuestionCategoriesProviderIntegrationTest {
     @Test
     void test() {
         final String responseBody = TestFilesUtil.readResourceFile("responses/trivia-categories.json");
-        String url = "/api_config.php";
+        String url = "/api_category.php";
         mockServer.stubFor(WireMock.get(WireMock.urlEqualTo(url))
                 .willReturn(
                         WireMock.aResponse()

@@ -1,6 +1,6 @@
 package org.quiz.generator.sources.opentriviadb.providers.select;
 
-import org.quiz.generator.sources.fields.SelectOption;
+import org.quizstorage.generator.dto.SelectOption;
 import org.quiz.generator.sources.fields.SelectOptionsProvider;
 import org.quiz.generator.sources.opentriviadb.dto.TriviaQuestionType;
 import org.springframework.stereotype.Component;

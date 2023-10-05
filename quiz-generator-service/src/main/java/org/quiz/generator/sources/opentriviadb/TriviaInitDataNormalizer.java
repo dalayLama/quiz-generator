@@ -12,7 +12,7 @@ import java.util.Map;
 public class TriviaInitDataNormalizer implements InitDataNormalizer<TriviaInitData, Map<String, String>> {
 
     @Override
-    public Map<String, String> normalize(Collection<InitField> initFields, TriviaInitData initData) {
+    public Map<String, String> normalize(Collection<InitField<?>> initFields, TriviaInitData initData) {
         return NormalizeUtil.toMap(initFields, initData);
     }
 

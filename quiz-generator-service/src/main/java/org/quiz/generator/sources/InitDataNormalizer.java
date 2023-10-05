@@ -6,6 +6,6 @@ import java.util.Collection;
 
 public interface InitDataNormalizer<T extends InitData, V> {
 
-    V normalize(Collection<InitField> initFields, T initData);
+    V normalize(Collection<InitField<?>> initFields, T initData);
 
 }

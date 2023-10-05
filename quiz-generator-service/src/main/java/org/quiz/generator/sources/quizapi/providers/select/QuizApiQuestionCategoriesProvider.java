@@ -2,7 +2,7 @@ package org.quiz.generator.sources.quizapi.providers.select;
 
 import lombok.RequiredArgsConstructor;
 import org.quiz.generator.configurations.properties.quizapi.QuizApiProperties;
-import org.quiz.generator.sources.fields.SelectOption;
+import org.quizstorage.generator.dto.SelectOption;
 import org.quiz.generator.sources.fields.SelectOptionsProvider;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;

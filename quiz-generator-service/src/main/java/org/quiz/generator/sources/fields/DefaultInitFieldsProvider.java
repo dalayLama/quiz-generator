@@ -16,7 +16,7 @@ public class DefaultInitFieldsProvider implements InitFieldsProvider {
     }
 
     @Override
-    public Stream<InitField> getInitFields() {
+    public Stream<InitField<?>> getInitFields() {
         return initFieldProviders.stream().map(InitFieldProvider::get);
     }
 

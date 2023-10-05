@@ -1,6 +1,7 @@
 package org.quiz.generator.sources.fields;
 
 import org.quizstorage.generator.dto.Difficulty;
+import org.quizstorage.generator.dto.SelectOption;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;

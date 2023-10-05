@@ -1,7 +1,7 @@
 package org.quiz.generator.sources.opentriviadb.providers.select;
 
 import lombok.RequiredArgsConstructor;
-import org.quiz.generator.sources.fields.SelectOption;
+import org.quizstorage.generator.dto.SelectOption;
 import org.quiz.generator.sources.fields.SelectOptionsProvider;
 import org.quiz.generator.sources.opentriviadb.TriviaClient;
 import org.quiz.generator.sources.opentriviadb.dto.TriviaQuestionCategory;

@@ -21,7 +21,8 @@ import java.util.stream.Collectors;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(properties = {
-        "quiz-sources.quiz-api.url=http://127.0.0.1:${wiremock.server.port}"
+        "quiz-sources.quiz-api.url=http://127.0.0.1:${wiremock.server.port}",
+        "quiz-sources.quiz-api.enable=true"
 })
 @AutoConfigureWireMock(port = 0)
 class QuizApiClientIntegrationTest {

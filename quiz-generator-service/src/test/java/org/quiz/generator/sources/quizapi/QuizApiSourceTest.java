@@ -40,8 +40,8 @@ class QuizApiSourceTest {
 
     @Test
     void shouldGenerateQuestions() {
-        InitField initField = InitField.builder().build();
-        Stream<InitField> initFieldStream = Stream.of(initField);
+        InitField<?> initField = InitField.builder().build();
+        Stream<InitField<?>> initFieldStream = Stream.of(initField);
         QuizApiInitData quizApiInitData = new QuizApiInitData();
         Map<String, String> params = Map.of();
         QuizApiQuestion apiQuestion = QuizApiQuestion.builder().build();

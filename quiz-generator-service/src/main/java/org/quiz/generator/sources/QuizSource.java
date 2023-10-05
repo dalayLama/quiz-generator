@@ -13,7 +13,7 @@ public interface QuizSource<T extends InitData> {
 
     String description();
 
-    List<InitField> initFields();
+    List<InitField<?>> initFields();
 
     QuestionSet generate(T initData);
 

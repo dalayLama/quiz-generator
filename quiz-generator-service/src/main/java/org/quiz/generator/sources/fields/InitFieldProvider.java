@@ -4,6 +4,6 @@ import org.quizstorage.generator.dto.InitField;
 
 public interface InitFieldProvider {
 
-    InitField get();
+    InitField<?> get();
 
 }

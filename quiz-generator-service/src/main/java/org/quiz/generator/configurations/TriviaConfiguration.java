@@ -33,7 +33,13 @@ public class TriviaConfiguration {
     }
 
     public SelectInitFieldProvider categoriesInitFieldProvider() {
-        return new SelectInitFieldProvider("category", "Category", false, categoriesProvider);
+        return new SelectInitFieldProvider(
+                "category",
+                "Category",
+                false,
+                true,
+                categoriesProvider
+        );
     }
 
     public SelectInitFieldProvider difficultyInitFieldProvider() {
@@ -41,12 +47,19 @@ public class TriviaConfiguration {
                 "difficulty",
                 "Difficulty",
                 false,
+                false,
                 difficultiesProvider
         );
     }
 
     public SelectInitFieldProvider typeInitFieldProvider() {
-        return new SelectInitFieldProvider("type", "Type", false, typesProvider);
+        return new SelectInitFieldProvider(
+                "type",
+                "Type",
+                false,
+                false,
+                typesProvider
+        );
     }
 
     @Bean

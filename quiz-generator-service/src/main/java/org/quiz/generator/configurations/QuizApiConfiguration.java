@@ -32,13 +32,14 @@ public class QuizApiConfiguration {
     }
 
     public SelectInitFieldProvider categoriesInitFieldProvider() {
-        return new SelectInitFieldProvider("category", "Category", false, categoriesProvider);
+        return new SelectInitFieldProvider("category", "Category", false, true, categoriesProvider);
     }
 
     public SelectInitFieldProvider difficultyInitFieldProvider() {
         return new SelectInitFieldProvider(
                 "difficulty",
                 "Difficulty",
+                false,
                 false,
                 difficultiesProvider
         );
